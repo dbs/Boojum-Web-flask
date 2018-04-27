@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block filters %}
+	<h2>Filter by:</h2>
+	<div class="fields">
+		<!--TODO Iterate over me -->
+		<div class="field">
+			<h3 class="title">Location</h3>
+			<div class="options">
+                <!-- TODO Iterate over me -->
+                <p class="option"></p>
+            </div>
+		</div>
+		<div class="field">
+			<h3 class="title">Date</h3>
+			<div class="options">
+				<!-- TODO Iterate over me -->
+				<p class="option"></p>
+			</div>
+		</div>
+	</div>
+{% endblock filters %}
+{% block map %}
+	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d57622450.16575137!2d-7.68025764999996!3d28.177059938011148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1524771225346" width="1000" height="780" frameborder="0" style="border:0" allowfullscreen></iframe>
+{% endblock map %}
+{% block results %}
+	<div class="items">
+		<!-- TODO Iterate over me -->
+		{% for n in range(1, 100) %}
+		<div class="item">
+			<h3 class="title">Title</h3>
+			<h4 class="author">Author</h4>
+			<p class="description">Description</p>
+			<a href=#>Link</a>
+		</div>
+		{% endfor %}
+	</div>
+{% endblock results %}

@@ -1,0 +1,44 @@
+.header {
+	text-align: center;
+}
+
+.filter {
+	display: flex;
+	align-items: center;
+}
+
+.filter h2 {
+	padding-right: 1em;
+}
+
+.filter .fields {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.filter .field {
+	padding-right: 1em;
+}
+
+.filter .field .options {
+	display: none;
+}
+
+.group {
+	display: flex;
+	justify-content: space-between;
+}
+
+.group .map {
+	order: 1;
+}
+
+.group .results {
+	order: 0;
+	height: 83vh;
+	width: 47vw;
+	overflow-y: scroll;
+	border-top: 1px solid black;
+}
+	
