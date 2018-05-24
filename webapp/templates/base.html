@@ -1,25 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<title>Boojum Technical Reports</title>
-		<link rel="stylesheet" href="/static/style.css" type="text/css" />
+		<link rel="stylesheet" href="/static/style.css" type="text/css"/>
 	</head>
 	<body>
-		<div class="header">
-			<h1>Boojum Technical Reports</h1>			
-		</div>
-		<div class="filter">
-			{% block filters %}{% endblock filters %}
-		</div>
-		<div class="group">
-			<div class="map">
-				{% block map %}{% endblock map %}
-			</div>
-			<div class="results">
-				{% block results %}{% endblock results %}
-			</div>
-		</div>
+		{% block map %}{% endblock map %}
+		{% block results %}
+		{% endblock results %}
 	</body>
 </html>
