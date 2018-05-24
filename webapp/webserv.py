@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """
-Boojum technical reports website flask implementation
+Map-based discovery of Boojum Technical Reports Front End
 """
 
 import flask
-import os
 from jinja2 import Environment, FileSystemLoader
+import os
 
 env = Environment(loader=FileSystemLoader(searchpath="%s/templates" % os.path.dirname((os.path.realpath(__file__)))), trim_blocks=True)
+
 app = flask.Flask(__name__)
 
 @app.route("/")
