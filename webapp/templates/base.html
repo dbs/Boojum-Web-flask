@@ -7,8 +7,10 @@
 		<link rel="stylesheet" href="/static/style.css" type="text/css"/>
 	</head>
 	<body>
-		{% block map %}{% endblock map %}
-		{% block results %}
-		{% endblock results %}
+		<div class="sidepanel">
+            {% block search %}{% endblock search %}
+            {% block results %}{% endblock results %}
+		</div>
+        {% block map %}{% endblock map %}
 	</body>
 </html>

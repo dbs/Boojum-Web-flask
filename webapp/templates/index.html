@@ -1,11 +1,10 @@
 {% extends "base.html" %}
-{% block map %}
-{% include "map.html" %}
-{% endblock map %}
-{#
+{% block search %}
+	{% include "search.html" %}
+{% endblock search %}
 {% block results %}
-	<div class="results">
-		
-    </div>
+	{% include "results.html" %}
 {% endblock results %}
-#}
+{% block map %}
+	{% include "map.html" %}
+{% endblock map %}
