@@ -4,18 +4,20 @@
 Create the PostgreSQL database for querying technical reports
 """
 
-import postgresql
+import psycopg2
 
 DB_NAME = 'boojum'
 DB_HOST = 'localhost' 
 DB_USER = 'boojum'
 
-DB = postgresql.open(host=DB_HOST, database=DB_NAME, user=DB_USER)
 
 def init_db():
     """ Initialize the database """
-    DB.execute("DROP TABLE IF EXISTS reports")
-    DB.execute("""
+    #conn = psycopg2.connect(host=DB_HOST, database=DB_NAME, user=DB_USER)
+    conn = psycopg2.connect(database=DB_NAME)
+    cur = conn.cursor()
+    cur.execute("DROP TABLE IF EXISTS reports")
+    cur.execute("""
         CREATE TABLE reports (id SERIAL,
                               title TEXT,
                               author TEXT,
@@ -24,6 +26,9 @@ def init_db():
                               handle TEXT, 
                               file TEXT)
     """)
+    conn.commit()
+    cur.close()
+    conn.close()
 
 if __name__ == "__main__":
     init_db()
